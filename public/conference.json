@@ -2,7 +2,7 @@
     {
         "id": "1",
         "card_img": "https://i.ibb.co/dMxPynZ/technology-service.jpg",
-        "address": "Tech Innovators Tech Auditorium, California, USA.",
+        "address": "Innovators Tech Auditorium, California, USA.",
         "time": "9.30 AM - 10.30 AM",
         "title": "Technology Conferences - 2023",
         "description": "Welcome to the Technology Conference 2023, where innovation meets inspiration! Join us for a dynamic gathering of industry leaders, tech visionaries, and thought-provoking discussions. Explore the latest advancements in AI, IoT, blockchain, cybersecurity, and more, while networking with top professionals shaping the future of technology. Don't miss this opportunity to stay at the forefront of the tech revolution.",
@@ -14,7 +14,7 @@
     {
         "id": "2",
         "card_img": "https://i.ibb.co/2cwdwXR/medical-img.jpg",
-        "address": "Cybersecurity D.C. Convention Center, USA.",
+        "address": "D.C. Convention Center, USA.",
         "time": "11.30 AM - 12.30 AM",
         "title": "Healthcare and Medical Conferences - 2023",
         "description": "Join us at the forefront of medical innovation at the 2023 Medical Advances Summit! This prestigious conference brings together renowned experts, healthcare professionals, and researchers from around the world to explore cutting-edge developments in healthcare and medicine. Discover the latest breakthroughs, exchange insights, and collaborate on solutions that will shape the future of healthcare. Don't miss this opportunity to be part of a transformative event that promises to revolutionize the way we approach healthcare in the 21st century.",
@@ -26,7 +26,7 @@
     {
         "id": "3",
         "card_img": "https://i.ibb.co/zVnKcW9/education-service.jpg",
-        "address": "Biotech Boston Science Park, Massachusetts, USA.",
+        "address": "Science Park, Massachusetts, USA.",
         "time": "12.30 AM - 01.30 PM",
         "title": "Education and Academic Conferences - 2023",
         "description": "Unlocking Knowledge: The 2023 Education Symposium. Join us for a dynamic gathering of educators, thought leaders, and innovators from across the globe. Explore the latest trends, share best practices, and engage in thought-provoking discussions on the future of education. Whether you're a teacher, administrator, or passionate about learning, this symposium offers a unique platform to inspire change and elevate education to new heights. Together, we'll shape the future of learning in 2023 and beyond.",
@@ -38,7 +38,7 @@
     {
         "id": "4",
         "card_img": "https://i.ibb.co/28jKbzz/science-service.jpg",
-        "address": "Renewable EcoTech Center, Colorado, USA.",
+        "address": "EcoTech Center, Colorado, USA.",
         "time": "02.30 PM - 03.30 PM",
         "title": "Science and Research Conferences - 2023",
         "description": "Dive into the Future: The 2023 Science Summit. Embark on a journey of discovery at this year's premier science event. Our summit brings together leading scientists, researchers, and enthusiasts to explore the frontiers of knowledge and innovation. From breakthroughs in space exploration to cutting-edge advancements in biotechnology, join us to witness the exciting possibilities that the world of science has to offer. Let's chart the course for a brighter, more informed future together, at the forefront of science in 2023.",
@@ -50,7 +50,7 @@
     {
         "id": "5",
         "card_img": "https://i.ibb.co/f9w4Dq4/leadership-service.jpg",
-        "address": "Renewable EcoTech Center, Colorado, USA.",
+        "address": "EcoTech Center, Colorado, USA.",
         "time": "03.30 PM - 04.30 PM",
         "title": "Leadership Development Conferences - 2023",
         "description": "Elevate Your Leadership in 2023: Join us for an immersive leadership development experience that will empower you to lead with vision, purpose, and impact. This event gathers top leadership experts, executives, and aspiring leaders to explore the latest strategies and insights in leadership. Discover new approaches to inspire and guide your teams, navigate challenges, and drive organizational success. Take the next step in your leadership journey and become a catalyst for positive change in your organization and beyond. Don't miss this opportunity to shape your leadership legacy in 2023.",
@@ -62,7 +62,7 @@
     {
         "id": "6",
         "card_img": "https://i.ibb.co/G7hkKDj/fashion-service.jpg",
-        "address": "Space Exploration Space Center, Florida, USA.",
+        "address": "Space Center, Florida, USA.",
         "time": "04.30 PM - 05.30 PM",
         "title": "Fashion and Style Conferences - 2023",
         "description": "2023 Fashion Fusion: Unleash your creativity and be at the forefront of the fashion world. Join us at the most anticipated fashion design event of the year! Connect with industry visionaries, trendsetters, and emerging talents as we explore the future of style and innovation. Experience the thrill of runway shows, hands-on workshops, and discussions on sustainable fashion. Whether you're a seasoned designer or a budding artist, this event promises to ignite your passion for fashion and set the trends for 2023 and beyond. Step into the world of haute couture and let your imagination soar.",

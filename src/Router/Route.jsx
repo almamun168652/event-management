@@ -13,11 +13,13 @@ const createdRoute = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: ()=> fetch('/conference.json')
             },
             {
-                path: '/details',
-                element: <Details></Details>
+                path: '/details/:id',
+                element: <Details></Details>,
+                loader: ()=> fetch('/conference.json')
             }
         ]
     }

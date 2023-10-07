@@ -1,7 +1,8 @@
 import SingleService from "../SignleService/SingleService";
+import PropTypes from 'prop-types';
 
+const Services = ({services}) => {
 
-const Services = () => {
     return (
         <div className="my-8 max-w-screen-xl mx-auto px-4">
             {/* title */}
@@ -12,17 +13,20 @@ const Services = () => {
 
             <div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-8">
-                    <SingleService></SingleService>
-                    <SingleService></SingleService>
-                    <SingleService></SingleService>
-                    <SingleService></SingleService>
-                    <SingleService></SingleService>
-                    <SingleService></SingleService>
+                    {
+                        services?.map(service => <SingleService key={service.id} service={service}></SingleService>)
+                    }
                 </div>
             </div>
 
         </div>
     );
 };
+
+
+Services.propTypes = {
+    services: PropTypes.array.isRequired
+}
+
 
 export default Services;
