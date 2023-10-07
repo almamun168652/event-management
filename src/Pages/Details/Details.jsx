@@ -38,7 +38,7 @@ const Details = () => {
                         <div>
                             <div className='flex flex-col md:flex-row justify-between font-semibold text-[#152475]'>
                                 <span className='flex gap-1 items-center'><MdLocationPin /> {address}</span>
-                                <span className='flex gap-1 items-center'><MdAccessTimeFilled /> {address}</span>
+                                <span className='flex gap-1 items-center'><MdAccessTimeFilled /> {time}</span>
                             </div>
                             <h1 className='text-black text-3xl font-bold'>{title}</h1>
                             <p className="text-sm text-gray-600">{description}

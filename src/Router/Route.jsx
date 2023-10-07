@@ -3,6 +3,8 @@ import Layout from "../Layout/Layout";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Home from "../Pages/Home/Home";
 import Details from "../Pages/Details/Details";
+import Login from "../Pages/Login/Login";
+import Register from "../Pages/Register/Register";
 
 
 const createdRoute = createBrowserRouter([
@@ -15,6 +17,14 @@ const createdRoute = createBrowserRouter([
                 path: '/',
                 element: <Home></Home>,
                 loader: ()=> fetch('/conference.json')
+            },
+            {
+                path: '/register',
+                element: <Register></Register>
+            },
+            {
+                path: '/login',
+                element: <Login></Login>
             },
             {
                 path: '/details/:id',

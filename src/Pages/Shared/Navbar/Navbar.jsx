@@ -16,32 +16,32 @@ const Navbar = () => {
         </li>
         <li className="">
             <NavLink
-                to="/special"
+                to="/speacial"
                 className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? "text-[#152475] font-bold border-b-2 border-[#152475]" : ""
                 }
             >
-                About
+                Speacial
             </NavLink>
         </li>
         <li className="">
             <NavLink
-                to="/latest"
+                to="/login"
                 className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? "text-[#152475] font-bold border-b-2 border-[#152475]" : ""
                 }
             >
-                Speakers
+                Login
             </NavLink>
         </li>
         <li className="">
             <NavLink
-                to="/latest"
+                to="/register"
                 className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? "text-[#152475] font-bold border-b-2 border-[#152475]" : ""
                 }
             >
-                Latest
+                Register
             </NavLink>
         </li>
     </>
@@ -66,7 +66,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="">
-                    <Link className="text-[#152475] hover:bg-[#152475] hover:text-[white] font-semibold px-2 rounded border border-[#152475]">Log In</Link>
+                    <Link className="text-[#152475] hover:bg-[#152475] hover:text-[white] font-semibold px-3 py-1 rounded border border-[#152475]">Log In</Link>
                 </div>
             </div>
         </div>
