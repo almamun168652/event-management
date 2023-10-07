@@ -14,7 +14,7 @@ const Layout = () => {
                 <Outlet></Outlet>
             </main>
 
-            <footer>
+            <footer className="mt-12">
                 <Footer></Footer>
             </footer>
         </div>
