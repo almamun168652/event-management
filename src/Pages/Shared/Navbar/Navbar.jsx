@@ -8,7 +8,7 @@ const Navbar = () => {
             <NavLink
                 to="/"
                 className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "bg-[#152475] text-white font-semibold" : ""
+                    isPending ? "pending" : isActive ? "text-[#152475] font-bold border-b-2 border-[#152475]" : ""
                 }
             >
                 Home
@@ -16,19 +16,29 @@ const Navbar = () => {
         </li>
         <li className="">
             <NavLink
-                to="/speacial"
+                to="/special"
                 className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "bg-[#152475] text-white" : ""
+                    isPending ? "pending" : isActive ? "text-[#152475] font-bold border-b-2 border-[#152475]" : ""
                 }
             >
-                Speacial
+                About
             </NavLink>
         </li>
         <li className="">
             <NavLink
                 to="/latest"
                 className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "bg-[#152475] text-white" : ""
+                    isPending ? "pending" : isActive ? "text-[#152475] font-bold border-b-2 border-[#152475]" : ""
+                }
+            >
+                Speakers
+            </NavLink>
+        </li>
+        <li className="">
+            <NavLink
+                to="/latest"
+                className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "text-[#152475] font-bold border-b-2 border-[#152475]" : ""
                 }
             >
                 Latest
@@ -38,8 +48,8 @@ const Navbar = () => {
 
     return (
         <div className="max-w-screen-xl mx-auto px-4">
-            <div className="navbar bg-base-100 flex">
-                <div className="navbar-start">
+            <div className="navbar bg-base-100 flex justify-between">
+                <div className="">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -48,15 +58,15 @@ const Navbar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <Link className="text-[#152475] font-bold text-3xl">Science Lit</Link>
+                    <Link to='/' className="text-[#152475] font-bold text-3xl">Talk Expo</Link>
                 </div>
-                <div className="navbar-center hidden lg:flex">
+                <div className=" hidden lg:flex">
                     <ul className="flex gap-4 menu menu-horizontal px-1 font-semibold">
                         {navLinks}
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <Link className="text-[#152475] hover:bg-[#152475] hover:text-[white] font-bold px-4 py-1 rounded-md border border-2 border-[#152475]">Log In</Link>
+                <div className="">
+                    <Link className="text-[#152475] hover:bg-[#152475] hover:text-[white] font-bold px-4 py-1 rounded-md border-2 border-[#152475]">Log In</Link>
                 </div>
             </div>
         </div>

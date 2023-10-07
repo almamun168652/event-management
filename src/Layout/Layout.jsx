@@ -1,14 +1,22 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../Pages/Shared/Navbar/Navbar";
+import Footer from "../Components/Footer/Footer";
 
 
 const Layout = () => {
     return (
         <div>
-            <nav className="border-b">
+            <header className="border-b">
                 <Navbar></Navbar>
-            </nav>
-            <Outlet></Outlet>
+            </header>
+
+            <main>
+                <Outlet></Outlet>
+            </main>
+
+            <footer>
+                <Footer></Footer>
+            </footer>
         </div>
     );
 };
