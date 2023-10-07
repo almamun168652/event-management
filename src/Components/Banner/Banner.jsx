@@ -9,7 +9,7 @@ const Banner = () => {
                     <div className="text-center w-full md:w-1/2">
                         <h1 className="text-4xl md:text-6xl font-bold text-white"><span>Talk Expo</span> Digital Conference</h1>
                         <p className="text-md md:text-lg my-4 text-white">No grand idea was ever born in a conference, but a lot of foolish ideas have died there.</p>
-                        <span className="text-white hover:bg-[#152475] transition-all text-sm border px-4 py-1"><Link>Learn More</Link></span>
+                        <span className="text-white hover:bg-[#152475] transition-all text-sm border px-4 py-1"><Link>Get Started</Link></span>
                     </div>
                 </div>
             </div>
