@@ -1,12 +1,14 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 
 const Register = () => {
 
+    const [passwordError, setPasswordError] = useState('');
 
-    const { googleLogin , createUser} = useContext(AuthContext);
+
+    const { googleLogin, createUser } = useContext(AuthContext);
 
     const handleGoogleLogin = () => {
         googleLogin()
@@ -25,7 +27,18 @@ const Register = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
 
-       createUser(email , password)
+
+        if (password.length < 6) {
+            setPasswordError('Password should have at least 6 characters or longer');
+            return;
+        }
+
+        if (!/[A-Z]/.test(password)) {
+            setPasswordError('Your password should heve at least one uppercase characters and one speacial character.')
+            return;
+        }
+
+        createUser(email, password)
             .then(res => {
                 console.log(res);
             })
@@ -33,9 +46,9 @@ const Register = () => {
                 console.log(err);
             });
 
-            e.target.name.value = '';
-            e.target.email.value = '';
-            e.target.password.value = '';
+        e.target.name.value = '';
+        e.target.email.value = '';
+        e.target.password.value = '';
     }
 
 
@@ -50,6 +63,7 @@ const Register = () => {
                     <p className="mt-1 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
                         Enter your details to register.
                     </p>
+                    {passwordError ? <p className="text-red-600 max-w-[400px] text-sm text-center relative -bottom-4">{passwordError}</p> : ''}
                     <form onSubmit={handleRegister} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
                         <div className="mb-4 flex flex-col gap-6">
                             <div className="relative h-11 w-full min-w-[200px]">
@@ -79,6 +93,7 @@ const Register = () => {
                                 <label className="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.1] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-[#152475] peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-[#152475] peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-[#152475] peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
                                     Password
                                 </label>
+
                             </div>
                         </div>
                         <button

@@ -7,7 +7,7 @@ const Services = ({services}) => {
         <div className="my-8 max-w-screen-xl mx-auto px-4">
             {/* title */}
             <div className="text-center">
-                <h1 className="text-4xl font-bold text-black ">Our Services</h1>
+                <h1 className="text-4xl font-bold text-black mb-1">Our Services</h1>
                 <span className="text-sm text-gray-600">Our all Services that you can Considers</span>
             </div>
 

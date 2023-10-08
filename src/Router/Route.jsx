@@ -5,6 +5,7 @@ import Home from "../Pages/Home/Home";
 import Details from "../Pages/Details/Details";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import PrivateRoute from "./PrivateRoute";
 
 
 const createdRoute = createBrowserRouter([
@@ -16,7 +17,7 @@ const createdRoute = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: ()=> fetch('/conference.json')
+                loader: () => fetch('/conference.json')
             },
             {
                 path: '/register',
@@ -28,8 +29,8 @@ const createdRoute = createBrowserRouter([
             },
             {
                 path: '/details/:id',
-                element: <Details></Details>,
-                loader: ()=> fetch('/conference.json')
+                element: <PrivateRoute><Details></Details></PrivateRoute>,
+                loader: () => fetch('/conference.json')
             }
         ]
     }

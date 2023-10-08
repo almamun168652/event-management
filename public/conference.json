@@ -2,7 +2,7 @@
     {
         "id": "1",
         "card_img": "https://i.ibb.co/dMxPynZ/technology-service.jpg",
-        "address": "Innovators Tech Auditorium, California, USA.",
+        "address": "Tech Auditorium, California, USA.",
         "time": "9.30 AM - 10.30 AM",
         "title": "Technology Conferences - 2023",
         "description": "Welcome to the Technology Conference 2023, where innovation meets inspiration! Join us for a dynamic gathering of industry leaders, tech visionaries, and thought-provoking discussions. Explore the latest advancements in AI, IoT, blockchain, cybersecurity, and more, while networking with top professionals shaping the future of technology. Don't miss this opportunity to stay at the forefront of the tech revolution.",
@@ -69,7 +69,7 @@
         "price": 125,
         "speaker_img": "https://i.ibb.co/LnWQSKq/fashion-designer.jpg",
         "speaker_name": "Orion Zenithspeaker",
-        "speaker_designation": "Leadership Research Specialist."
+        "speaker_designation": "Fashion Designer USA"
     }
    
 ]
