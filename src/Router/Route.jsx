@@ -23,11 +23,11 @@ const createdRoute = createBrowserRouter([
             },
             {
                 path: '/blog',
-                element: <Blog></Blog>
+                element: <PrivateRoute><Blog></Blog></PrivateRoute>
             },
-            {   
+            {
                 path: '/contact',
-                element: <Contact></Contact>
+                element: <PrivateRoute><Contact></Contact></PrivateRoute>
             },
             {
                 path: '/register',

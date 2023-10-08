@@ -13,7 +13,7 @@ const WhoSpeak = () => {
             <div className="my-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6  gap-x-20">
                     {/* single card */}
-                    <div data-aos="fade-down" className="mx-auto">
+                    <div data-aos="fade-down" data-aos-duration="1000" className="mx-auto">
                         <img className="object-cover h-80 w-72 border border-[#152475]" src="https://i.ibb.co/xqnLFys/speaker-1.jpg" alt="" />
                         <div className="bg-white p-4 text-center shadow-xl w-10/12 mx-auto relative -top-8 border-b border-[#152475]">
                             <p className="text-[#152475] font-bold">Aurora Summitshine</p>
@@ -21,7 +21,7 @@ const WhoSpeak = () => {
                         </div>
                     </div>
 
-                    <div data-aos="fade-down" className="mx-auto">
+                    <div data-aos="fade-down" data-aos-duration="1000" className="mx-auto">
                         <img className="object-cover h-80 w-72 border border-[#152475]" src="https://i.ibb.co/yYR1ZtP/medical-Ins.jpg" alt="" />
                         <div className="bg-white p-4 text-center shadow-xl w-10/12 mx-auto relative -top-8 border-b border-[#152475]">
                             <p className="text-[#152475] font-bold">Xavier Vanguard</p>
@@ -29,7 +29,7 @@ const WhoSpeak = () => {
                         </div>
                     </div>
 
-                    <div data-aos="fade-down" className="mx-auto">
+                    <div data-aos="fade-down" data-aos-duration="1000" className="mx-auto">
                         <img className="object-cover h-80 w-72 border border-[#152475]" src="https://i.ibb.co/XYqbW68/education-ins.jpg" alt="" />
                         <div className="bg-white p-4 text-center shadow-xl w-10/12 mx-auto relative -top-8 border-b border-[#152475]">
                             <p className="text-[#152475] font-bold">Seraphina Thunderheart</p>
@@ -37,7 +37,7 @@ const WhoSpeak = () => {
                         </div>
                     </div>
 
-                    <div data-aos="fade-down" className="mx-auto">
+                    <div data-aos="fade-down" data-aos-duration="1000" className="mx-auto">
                         <img className="object-cover h-80 w-72 border border-[#152475]" src="https://i.ibb.co/QmNvGVP/science-ins.jpg" alt="" />
                         <div className="bg-white p-4 text-center shadow-xl w-10/12 mx-auto relative -top-8 border-b border-[#152475]">
                             <p className="text-[#152475] font-bold">Maximus Starcaster</p>
@@ -45,7 +45,7 @@ const WhoSpeak = () => {
                         </div>
                     </div>
 
-                    <div data-aos="fade-down" className="mx-auto">
+                    <div data-aos="fade-down" data-aos-duration="1000" className="mx-auto">
                         <img className="object-cover h-80 w-72 border border-[#152475]" src="https://i.ibb.co/M6YgS4y/leadership-ins.jpg" alt="" />
                         <div className="bg-white p-4 text-center shadow-xl w-10/12 mx-auto relative -top-8 border-b border-[#152475]">
                             <p className="text-[#152475] font-bold">Isabella Moonstrider</p>
@@ -53,7 +53,7 @@ const WhoSpeak = () => {
                         </div>
                     </div>
 
-                    <div data-aos="fade-down" className="mx-auto">
+                    <div data-aos="fade-down" data-aos-duration="1000" className="mx-auto">
                         <img className="object-cover h-80 w-72 border border-[#152475]" src="https://i.ibb.co/LnWQSKq/fashion-designer.jpg" alt="" />
                         <div className="bg-white p-4 text-center shadow-xl w-10/12 mx-auto relative -top-8 border-b border-[#152475]">
                             <p className="text-[#152475] font-bold">Orion Zenithspeaker</p>

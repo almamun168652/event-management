@@ -1,8 +1,10 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
+
+    const [err , setErr] = useState('');
 
 
     const { googleLogin , logInUser} = useContext(AuthContext);
@@ -19,7 +21,8 @@ const Login = () => {
                 navigate(location.state ? location.state : '/');
             })
             .catch(err => {
-                console.log(err);
+                console.log(err.message);
+                setErr(err.message);
             })
     }
 
@@ -29,6 +32,8 @@ const Login = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
 
+        setErr('');
+        
         logInUser(email , password)
             .then(res => {
                 console.log(res);
@@ -36,6 +41,7 @@ const Login = () => {
             })
             .catch(err => {
                 console.log(err);
+                setErr(err.message);
             });
 
             e.target.email.value = '';
@@ -55,6 +61,7 @@ const Login = () => {
                     <p className="mt-1 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
                         Enter your details to register.
                     </p>
+                    {err ? <p className="text-red-600 max-w-[400px] text-sm text-center relative -bottom-4">{err}</p> : ''}
                     <form onSubmit={handleLogin} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
                         <div className="mb-4 flex flex-col gap-6">
                             <div className="relative h-11 w-full min-w-[200px]">

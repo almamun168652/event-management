@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
-import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import app from "../Firebase/Firebase.config";
 
 
@@ -8,12 +8,12 @@ import app from "../Firebase/Firebase.config";
 const auth = getAuth(app);
 export const AuthContext = createContext(null);
 
-const AuthProvider = ({children}) => {
-    
-    const [user , setUser] = useState(null);
-    const [loading , setLoading] = useState(true);
+const AuthProvider = ({ children }) => {
 
-    
+    const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+
     const googleProvider = new GoogleAuthProvider();
 
 
@@ -22,9 +22,9 @@ const AuthProvider = ({children}) => {
     // google sign in 
     const googleLogin = () => {
         setLoading(true);
-        return signInWithPopup(auth , googleProvider)
+        return signInWithPopup(auth, googleProvider)
     }
-    
+
 
     // create user email and pass
     const createUser = (email, password) => {
@@ -39,6 +39,14 @@ const AuthProvider = ({children}) => {
         return signInWithEmailAndPassword(auth, email, password)
     }
 
+    // update profile
+    const profileUpdate = (name, photo) => {
+        return updateProfile(auth.currentUser, {
+            displayName: name,
+            photoURL: photo,
+        });
+    }
+
     // logout
     const logOut = () => {
         setLoading(true);
@@ -47,14 +55,14 @@ const AuthProvider = ({children}) => {
 
 
     // on auth state
-    useEffect(()=>{
+    useEffect(() => {
 
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser);
             setLoading(false);
         });
-        
-        return ()=> {
+
+        return () => {
             unSubscribe();
         }
 
@@ -65,6 +73,7 @@ const AuthProvider = ({children}) => {
         googleLogin,
         createUser,
         logInUser,
+        profileUpdate,
         user,
         logOut,
         loading

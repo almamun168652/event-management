@@ -90,12 +90,49 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="">
-                    {
+                    {/* {
                         user ?
                             <button onClick={handleSignOut} className="text-[#152475] hover:bg-[#152475] hover:text-[white] font-semibold px-3 py-1 rounded border border-[#152475]">Log Out</button>
                             :
                             <Link to='/login'> <button className="text-[#152475] hover:bg-[#152475] hover:text-[white] font-semibold px-3 py-1 rounded border border-[#152475]">Log In</button> </Link>
-                    }
+                    } */}
+
+                    {user ? (
+                        <div className="dropdown dropdown-end">
+                            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                <div className="w-10 border-2 border-[#152475] rounded-full">
+                                    <img src={user.photoURL} />
+                                </div>
+                            </label>
+                            <ul
+                                tabIndex={0}
+                                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded w-60"
+                            >
+                                <li>
+                                    <a className="justify-between text-md hover:bg-transparent font-bold text-[#152475]">
+                                        {user.displayName}
+                                    </a>
+                                </li>
+                                <li>
+                                    <span className="justify-between font-semibold hover:bg-transparent mb-2 text-[#152475]">{user.email}</span>
+                                </li>
+                                <li>
+                                    <button
+                                        onClick={handleSignOut}
+                                        className="text-[#152475] text-center hover:bg-[#152475] hover:text-[white] font-semibold px-3 py-1 rounded border border-[#152475]"
+                                    >
+                                        Log Out
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    ) : (
+                        <Link to="/login">
+                            {" "}
+                            <button onClick={handleSignOut} className="text-[#152475] hover:bg-[#152475] hover:text-[white] font-semibold px-3 py-1 rounded border border-[#152475]">Log Out</button>{" "}
+                        </Link>
+                    )}
+
                 </div>
             </div>
         </div>
