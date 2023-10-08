@@ -49,7 +49,7 @@ const WhoSpeak = () => {
                         <img className="object-cover h-80 w-72 border border-[#152475]" src="https://i.ibb.co/M6YgS4y/leadership-ins.jpg" alt="" />
                         <div className="bg-white p-4 text-center shadow-xl w-10/12 mx-auto relative -top-8 border-b border-[#152475]">
                             <p className="text-[#152475] font-bold">Isabella Moonstrider</p>
-                            <span className="text-gray-500 text-sm">Leadership Research Specialist.</span>
+                            <span className="text-gray-500 text-sm">Leadership Specialist.</span>
                         </div>
                     </div>
 
