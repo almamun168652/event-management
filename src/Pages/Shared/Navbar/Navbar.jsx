@@ -90,12 +90,6 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="">
-                    {/* {
-                        user ?
-                            <button onClick={handleSignOut} className="text-[#152475] hover:bg-[#152475] hover:text-[white] font-semibold px-3 py-1 rounded border border-[#152475]">Log Out</button>
-                            :
-                            <Link to='/login'> <button className="text-[#152475] hover:bg-[#152475] hover:text-[white] font-semibold px-3 py-1 rounded border border-[#152475]">Log In</button> </Link>
-                    } */}
 
                     {user ? (
                         <div className="dropdown dropdown-end">
@@ -129,7 +123,7 @@ const Navbar = () => {
                     ) : (
                         <Link to="/login">
                             {" "}
-                            <button onClick={handleSignOut} className="text-[#152475] hover:bg-[#152475] hover:text-[white] font-semibold px-3 py-1 rounded border border-[#152475]">Log Out</button>{" "}
+                            <button onClick={handleSignOut} className="text-[#152475] hover:bg-[#152475] hover:text-[white] font-semibold px-3 py-1 rounded border border-[#152475]">Log In</button>{" "}
                         </Link>
                     )}
 
@@ -141,4 +135,3 @@ const Navbar = () => {
 
 export default Navbar;
 
-// className="text-[#152475] hover:bg-[#152475] hover:text-[white] font-semibold px-3 py-1 rounded border border-[#152475]">Log In
