@@ -1,6 +1,46 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
+
+
+    const { googleLogin , logInUser} = useContext(AuthContext);
+
+
+
+
+    const handleGoogleLogin = () => {
+        googleLogin()
+            .then(res => {
+                console.log(res);
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }
+
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+
+        logInUser(email , password)
+            .then(res => {
+                console.log(res);
+            })
+            .catch(err => {
+                console.log(err);
+            });
+
+            e.target.email.value = '';
+            e.target.password.value = '';
+
+    }
+
+
+
     return (
         <div>
             <div className="flex justify-center my-20">
@@ -11,10 +51,10 @@ const Login = () => {
                     <p className="mt-1 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
                         Enter your details to register.
                     </p>
-                    <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
+                    <form onSubmit={handleLogin} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
                         <div className="mb-4 flex flex-col gap-6">
                             <div className="relative h-11 w-full min-w-[200px]">
-                                <input
+                                <input type="email" name="email"
                                     className="peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-[#152475] focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
 
                                 />
@@ -24,7 +64,7 @@ const Login = () => {
                             </div>
                             <div className="relative h-11 w-full min-w-[200px]">
                                 <input
-                                    type="password"
+                                    type="password" name="password"
                                     className="peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-[#152475] focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
 
                                 />
@@ -35,23 +75,22 @@ const Login = () => {
                         </div>
                         <button
                             className="mt-6 block w-full select-none rounded-lg bg-[#152475] py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-[#152475]/20 transition-all hover:shadow-lg hover:shadow-[#152475]/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                            type="button"
+                            type="submit"
                             data-ripple-light="true"
                         >
-                            Register
+                            Log In
                         </button>
+                    </form>
+
+                    <div className="flex flex-col items-center justify-center gap-4">
                         <p className="mt-4 block text-center font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
                             Are you new? please<Link className="font-semibold text-[#152475]" to='/register'> Sign Up</Link>
                         </p>
-
-                        <div className="flex items-center justify-center mt-4">
-                            <button className="flex gap-2 items-center bg-white border border-gray-300 rounded-lg shadow-md px-6 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
-                                <img className="w-5" src="https://i.ibb.co/bQWtMgX/Google-G-Logo-svg-1-removebg-preview.png" alt="" />
-                                <span>Continue with Google</span>
-                            </button>
-                        </div>
-
-                    </form>
+                        <button onClick={handleGoogleLogin} className="flex gap-2 items-center bg-white border border-gray-300 rounded-lg shadow-md px-6 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+                            <img className="w-5" src="https://i.ibb.co/bQWtMgX/Google-G-Logo-svg-1-removebg-preview.png" alt="" />
+                            <span>Continue with Google</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
