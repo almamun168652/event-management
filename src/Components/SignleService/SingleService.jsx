@@ -1,6 +1,9 @@
 import { MdLocationPin, MdAccessTimeFilled } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 const SingleService = ({ service }) => {
 
@@ -9,7 +12,9 @@ const SingleService = ({ service }) => {
 
 
     return (
-        <div>
+        <div data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000">
             <div className="border shadow-xl rounded-lg border-gray-300">
                 {/* card */}
                 <div>

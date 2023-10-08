@@ -5,11 +5,11 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Navbar = () => {
 
-    const { user , logOut } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
 
     const handleSignOut = () => {
         logOut()
-            .then(res=> {
+            .then(res => {
                 console.log(res);
             })
             .catch(err => {
@@ -26,6 +26,16 @@ const Navbar = () => {
                 }
             >
                 Home
+            </NavLink>
+        </li>
+        <li className="">
+            <NavLink
+                to="/blog"
+                className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "text-[#152475] font-bold border-b-2 border-[#152475]" : ""
+                }
+            >
+                Blog
             </NavLink>
         </li>
         <li className="">

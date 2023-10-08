@@ -5,14 +5,14 @@ const Footer = () => {
     return (
         <div className="bg-[url('https://i.ibb.co/PNFGGTd/footer-img.jpg')] bg-cover bg-no-repeat bg-center">
             <footer className="footer footer-center p-10 bg-[#000000ba] text-primary-content">
-                <aside>
+                <aside data-aos="zoom-in-left">
                     <Link to='/' className="text-white font-bold text-3xl">Talk Expo</Link>
                     <p className="font-bold">
                         Our Speakers Always ready for you.
                     </p>
 
                 </aside>
-                <div className="flex gap-5">
+                <div data-aos="zoom-in-left" className="flex gap-5">
                     <li className="text-white list-none">
                         <Link>Home</Link>
                     </li>

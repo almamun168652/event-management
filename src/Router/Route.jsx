@@ -7,6 +7,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import Contact from "../Pages/Contact/Contact";
+import Blog from "../Pages/Blog/Blog";
 
 
 const createdRoute = createBrowserRouter([
@@ -19,6 +20,10 @@ const createdRoute = createBrowserRouter([
                 path: '/',
                 element: <Home></Home>,
                 loader: () => fetch('/conference.json')
+            },
+            {
+                path: '/blog',
+                element: <Blog></Blog>
             },
             {   
                 path: '/contact',
