@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <div data-aos="fade-zoom-in"
-            data-aos-easing="ease-in-back"
-            data-aos-delay="300"
-            data-aos-offset="0" className="bg-[url('https://i.ibb.co/PNFGGTd/footer-img.jpg')] bg-cover bg-no-repeat bg-center">
+        <div className="bg-[url('https://i.ibb.co/PNFGGTd/footer-img.jpg')] bg-cover bg-no-repeat bg-center">
             <footer className="footer footer-center p-10 bg-[#000000ba] text-primary-content">
                 <aside>
                     <Link to='/' className="text-white font-bold text-3xl">Talk Expo</Link>
