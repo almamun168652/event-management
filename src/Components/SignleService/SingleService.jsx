@@ -30,7 +30,7 @@ const SingleService = ({ service }) => {
                             <div className='flex h-[56px] items-center'>
                                 <h1 className='text-black text-xl font-bold'>{title}</h1>
                             </div>
-                            <p className="text-sm text-gray-600">{description.slice(0, 100)}</p>
+                            <p className="text-sm text-gray-600">{description.slice(0, 85)} . . .</p>
                             <div className="flex justify-between items-center mt-4">
                                 <p className="text-[#152475] font-bold">Ticket Price: ${price}</p>
                                 <Link to={`/details/${id}`}>
