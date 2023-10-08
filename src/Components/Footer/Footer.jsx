@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 const Footer = () => {
     return (
-        <div className="bg-[url('https://i.ibb.co/PNFGGTd/footer-img.jpg')] bg-cover bg-no-repeat bg-center">
+        <div data-aos="fade-down" className="bg-[url('https://i.ibb.co/PNFGGTd/footer-img.jpg')] bg-cover bg-no-repeat bg-center">
             <footer className="footer footer-center p-10 bg-[#000000ba] text-primary-content">
                 <aside>
                     <Link to='/' className="text-white font-bold text-3xl">Talk Expo</Link>

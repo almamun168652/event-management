@@ -1,10 +1,13 @@
 import { MdLocationPin, MdOutlineMailOutline, MdCall } from 'react-icons/md';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 const Contact = () => {
     return (
         <div className="max-w-screen-xl px-4 mx-auto my-20">
 
-            <div className="flex flex-col md:flex-row gap-10 justify-between p-10 border">
+            <div  data-aos="flip-left" className="flex flex-col md:flex-row gap-10 justify-between p-10 border">
                 <div className="w-full md:w-1/2">
                     <h1 className=" text-2xl md:text-4xl font-bold">Get Every Single <br />Update Here</h1>
                     <form className="my-5">
@@ -19,7 +22,7 @@ const Contact = () => {
                 </div>
             </div>
 
-            <div className='flex flex-col md:flex-row justify-between shadow-xl min-h-[450px] my-20 border border-[#152475]'>
+            <div  data-aos="flip-right" className='flex flex-col md:flex-row justify-between shadow-xl min-h-[450px] my-20 border border-[#152475]'>
                 <div className='w-full md:w-1/2 p-10'>
                     <img src="https://i.ibb.co/k4j6L4b/contact-icn.png" alt="" />
                     <h1 className=" text-3xl md:text-5xl mb-2 font-bold text-[#152475]">Lets get in touch</h1>
