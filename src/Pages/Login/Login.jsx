@@ -25,8 +25,7 @@ const Login = () => {
                 navigate(location.state ? location.state : '/');
             })
             .catch(err => {
-                console.log(err.message);
-                setErr(err.message);
+                setErr(err.code);
             })
     }
 
@@ -45,8 +44,7 @@ const Login = () => {
                 navigate(location.state ? location.state : '/');
             })
             .catch(err => {
-                console.log(err);
-                setErr(err.message);
+                setErr(err.code);
             });
 
         e.target.email.value = '';

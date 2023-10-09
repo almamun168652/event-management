@@ -19,7 +19,7 @@ const Register = () => {
                 swal("Good job!", "Request Successfully!", "success");
             })
             .catch(err => {
-                setPasswordError(err.message);
+                setPasswordError(err.code);
             })
     }
 
